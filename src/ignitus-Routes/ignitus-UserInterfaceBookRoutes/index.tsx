@@ -23,9 +23,12 @@ import {interfaceDashBoardFooter} from '../../ignitus-UserInterfaceBook/Componen
 import {interfaceIconInput} from '../../ignitus-UserInterfaceBook/Components/Atoms/interfaceIconInput/Components';
 import {interfaceMultiMediaInput} from '../../ignitus-UserInterfaceBook/Components/Atoms/interfaceMulti/Components';
 import {interfaceOverlay} from '../../ignitus-UserInterfaceBook/Components/Molecules/interfaceOverlay/Components';
+import {interfaceTags} from '../../ignitus-UserInterfaceBook/Components/Atoms/interfaceTags/Components';
 import {interfaceFilters} from '../../ignitus-UserInterfaceBook/Components/Templates/interfaceFilters/Components/index';
 import {interfaceUserProfile} from '../../ignitus-UserInterfaceBook/Components/Organisms/interfaceUserProfile/Components';
 import {InterfaceAvatar} from '../../ignitus-UserInterfaceBook/Components/Organisms/interfaceAvatar/Components';
+import {interfaceSideProfile} from '../../ignitus-UserInterfaceBook/Components/Organisms/interfaceSideProfile/Components/index';
+import {InterfaceProgress} from '../../ignitus-UserInterfaceBook/Components/Molecules/interfaceProgress/index';
 
 const Container = styled.div`
   display: flex;
@@ -109,6 +112,9 @@ export const UserInterfaceBookRoutes: React.FunctionComponent = () => (
           component={interfaceMultiMediaInput}
         />
         <Route path="/interface/seperators" component={interfaceSeparator} />
+
+        <Route path="/interface/tags" component={interfaceTags} />
+
         <Route
           path="/interface/dashBoardFooter"
           component={interfaceDashBoardFooter}
@@ -117,6 +123,8 @@ export const UserInterfaceBookRoutes: React.FunctionComponent = () => (
         <Route path="/interface/userProfile" component={interfaceUserProfile} />
         <Route path="/interface/overlay" component={interfaceOverlay} />
         <Route path="/interface/avatar" component={InterfaceAvatar} />
+        <Route path="/interface/sideProfile" component={interfaceSideProfile} />
+        <Route path="/interface/progress" component={InterfaceProgress} />
       </Switch>
     </LeftRow>
   </Container>
